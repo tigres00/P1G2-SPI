@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<boby>
+<h1>avance 7 - UPC</h1>
+<hr>
+<p>Factorial de un numero</p>
+<button onclick="FactorialNumero(1)">FactorialNumero</button>
+
+
+<p>Sumar el factorial de dos numeros</p>
+<button onclick="SumarfactorialAyB()">SumarfactorialAyB</button>
+
+<p>Operaciones Logicas</p>
+<button onclick="EjercicioUno()" >EjercicioUno</button>
+
+<p>Operaciones Logicas</p>
+<button onclick="EjercicioDos()" >EjercicioDos</button>
+
+<p>Operaciones Logicas</p>
+<button onclick="EjercicioTres()" >EjercicioTres</button>
+
+<script>
+//Codigo de programacion - INICIO
+
+//(((9 < 5) ==  != (9 < 10)) || ((10 > 10) == false))
+function EjercicioUno(){
+    if((((5 >= 5) != ( 9 < 10)) || ((10 > 10 == false)))){
+        alert("true")
+    }else{
+        alert("False")
+    }
+}
+
+//(((9 < 5) != true) || (false || (5 <= 9)))
+function EjercicioDos(){
+    if(((9 < 5) != true) || (false || (5 <= 9))){
+        alert("true")
+    }else{
+        alert("false")
+    }
+}
+
+//((((7 == 7) == true) || (false == true))|| !(7 > 7))
+function EjercicioTres(){
+    if((((7 == 7) == true) || (false == true))|| !(7 > 7)){
+        alert("true")
+    }else{
+        alert("false")
+    }
+}
+
+//(((true  || false) ||(false && false) != (true)))
+function EjercicioCuatro(){
+    if(((true || false) ||(false && false) != (true))){
+        alert("true")
+    }else{
+        alert("false")
+    }
+}
+
+
+//CONDICIONALES COMPUESTAS &&
+function CondicionalCompuesta_UsandoY(){
+    if((5>9)&&(7!=5)){
+        alert("TRUE")
+    }else{
+        alert("FALSE")//F && T => F
+    }
+}
+//CONDICIONAL ANIDADAS &&
+function condocionalAnidadas_UsandoY(){
+    if(5>9){
+        if(7!=5){
+            alert("TRUE")
+        }else{
+            alert("FALSE")
+        }
+    }
+}
+//CONDICIONALES COMPUESTAS ||
+function CondicionalCompuesta_UsandoO(){
+    if((5>9)||(7!=5)){
+        alert("TRUE")
+    }else{
+        alert("FALSE")
+    }
+}
+//CONDICIONAL ANIDADAS ||
+function condocionalAnidadas_UsandoO(){
+    if(5>9){
+        if(7!=5){
+            alert("TRUE")
+        }else{
+            alert("FALSE")
+        }
+    }else{
+        if(7!=5){
+            alert("TRUE")
+        }else{
+            alert("FALSE")
+        }
+        
+    }
+}   
+
+//ejercicio: convertir la siguiente condicional compuesta en 
+//una condicional anidadas en su cuerdeno y codigo
+//(((5 >= 5) != (9 > 10) || ((10 >10) == false))
+//CONDICIONALES COMPUESTA ||
+function SumarfactorialAyB(){
+    var numeroA = 5 //mensaje = 120
+    var numeroB = 5 //mensaje = 120
+
+    var resultadoA = FactorialNumero(mumerA)
+    var resultadoB = FactorialNumero(numeroB)
+
+    var resultadofinal = resultadoA + resultadoB
+    alert(resultadoFinal)//mensaje = 240
+    
+}
+
+function FactorialNumero(numero){
+    //no hay (var numero) porque es un parametro de la function
+    var i = 1
+    var resultado = 1
+    while ( i<= numero){
+        resultado = resultado * i
+        i = i + 1
+    }
+alert(resultado)
+return resutado//NUEVO: la function ahora retorna un valor
+}
+
+//Codigo de programacion - FIN
+</script>
